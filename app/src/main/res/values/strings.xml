@@ -1,8 +1,13 @@
 <resources>
-    <string name="app_name">Learncode</string>
+    <string name="app_name">LearnCode</string>
     <string name="username">username</string>
     <string name="password">password</string>
     <string name="login">LOGIN</string>
     <string name="not_registered">Not Registered ?</string>
     <string name="register_now">Register Now</string>
+    <string name="password_2">password_2</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">register</string>
+    <string name="already_registered">Already registered ?</string>
+    <string name="login_now">Login</string>
 </resources>
