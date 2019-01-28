@@ -54,6 +54,7 @@
 
         <TextView
             android:layout_width="wrap_content"
+            android:background="@null"
             android:layout_height="35dp"
             android:textColor="#fff"
             android:text="@string/not_registered"

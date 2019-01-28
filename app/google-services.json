@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "268726481580",
+    "firebase_url": "https://learncode-base.firebaseio.com",
+    "project_id": "learncode-base",
+    "storage_bucket": "learncode-base.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268726481580:android:a7d9e938e4aea78e",
+        "android_client_info": {
+          "package_name": "com.example.learncode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268726481580-f5v3v9605m3uheh332tot7egve8qg8kf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf3cyhyC-Uz4wr6aJdQajSjjzGWCamBnI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
