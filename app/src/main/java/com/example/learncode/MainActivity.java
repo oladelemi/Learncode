@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                     Boolean res = db.checkUser(user,pwd);
                     if (res == true)
                     {
-                        Toast.makeText(MainActivity.this, "Successfully Logged in", Toast. LENGTH_SHORT).show();
+                        Intent homeactivity = new Intent(MainActivity.this,HomeActivity.class);
+                        startActivity(homeactivity);
                     }
                     else
                     {
