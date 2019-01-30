@@ -45,10 +45,17 @@ public class RegisterActivity extends AppCompatActivity {
                 String cnf_pwd = textCnfPassword.getText().toString().trim();
 
 
-                if ( db.MultipleUser(user) )
+                if ( Validate())
+                {
+                    Toast.makeText(RegisterActivity.this, "Invalid Username/Password Combo", Toast.LENGTH_SHORT).show();
+
+                }
+
+
+                else if ( db.MultipleUser(user) )
                 {
                     Toast.makeText(RegisterActivity.this, "Username already Exists!!", Toast.LENGTH_SHORT).show();
-                }
+            }
                 else {
 
                     if (pwd.equals(cnf_pwd)) {
@@ -71,5 +78,16 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
         });
+
+
+    }
+
+    // This ensure user uses a minimum of three characters for username & a minimum of 4 characters for password
+    private boolean Validate() {
+
+        if ((textUsername.getText().length() < 3) || (textPassword.getText().length() < 4)) {
+            return true;
+        }
+        return false;
     }
 }
