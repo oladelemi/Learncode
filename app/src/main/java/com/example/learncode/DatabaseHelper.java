@@ -38,8 +38,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
 
     }
-    public boolean checkUser(String username, String password) {
+    // checks for Multiple user entries during registration
+    public boolean MultipleUser (String username) {
+        String[] columns = {COL_2};
+        SQLiteDatabase db = getReadableDatabase();
+        String selection = COL_2 + "=?";
+        String[] selectionArgs = {username};
+        Cursor cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
+        int count = cursor.getCount();
+        cursor.close();
+        db.close();
 
+        if (count > 0)
+            return true;
+        else
+            return false;
+    }
+        //validates a user credentials for login purposes
+    public boolean checkUser(String username, String password) {
         String[] columns = {COL_1};
         SQLiteDatabase db = getReadableDatabase();
         String selection = COL_2 + "=?" + " and " + COL_3 + "=?";
