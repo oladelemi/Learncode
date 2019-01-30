@@ -10,5 +10,6 @@
     <string name="register">register</string>
     <string name="already_registered">Already registered ?</string>
     <string name="welcome_user">welcome to the Home Page</string>
+    <string name="userProfile">My Profile</string>
 
 </resources>
