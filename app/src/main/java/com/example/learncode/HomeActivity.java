@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.menuProfile:
                 Toast.makeText(this, "Opening user profile", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, ProfileActivity.class));
+                startActivity(new Intent(this, CreateProfileActivity.class));
                 finish();
                 break;
         }
