@@ -1,6 +1,7 @@
 package com.example.learncode;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,19 +38,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
             buttonLogin.setOnClickListener(new View.OnClickListener() {
-                @Override
+                    @Override
                 public void onClick(View v) {
                     String user = textUsername.getText().toString().trim();
                     String pwd = textPassword.getText().toString().trim();
                     Boolean res = db.checkUser(user,pwd);
                     if (res == true)
                     {
-                        Intent homeactivity = new Intent(MainActivity.this,HomeActivity.class);
+                        Intent homeactivity = new Intent(MainActivity.this,Introduction.class);
                         startActivity(homeactivity);
                     }
                     else
                     {
                         Toast.makeText(MainActivity.this, "login Error", Toast. LENGTH_SHORT).show();
+                        MediaPlayer login = MediaPlayer.create(null, R.raw.login);
+                        login.start();
 
                     }
                 }
